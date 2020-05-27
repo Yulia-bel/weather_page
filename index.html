@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Upload the latest JQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="main__container">
+        <div class="search__bar">
+            <input type="text" placeholder="Chose city.." id="search"> <button id="show__city">Show City</button>
+        </div>
+
+
+        <div id="city__name"></div>
+        <div id="weekday"></div>
+
+            <div class="visible">
+
+                <div class="temperature__container">
+                    <img src="" alt="icon" id="weather__icon">
+                    <div id="weather__degrees"></div>
+                    <div id="therm"><i class="fas fa-thermometer-half fa-3x"></i></div>
+                </div>
+
+                <div class="conditions__container">
+                    <div class="icon_container">
+                        <img src="https://img.icons8.com/fluent/48/000000/sunrise.png" id="sunrise__icon" alt="sunrise" class="icon">
+                        <p id="sunrise__time" class="info"></p>
+                    </div>
+                    <div class="icon_container">
+                        <img src="https://img.icons8.com/fluent/48/000000/sunset.png" id="sunset__icon" alt="sunset" class="icon">
+                        <p id="sunset__time" class="info"></p>
+                    </div>
+                    <div class="icon_container">
+                        <img src="https://cdn4.iconfinder.com/data/icons/heavy-weather/100/Weather_Icons_07_windy-512.png" id="wind__icon" alt="wind" class="icon">
+                        <p id="wind__info" class="info">Wind</p>
+                        <p id="wind__info_speed" class="info"></p>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <script src="src/myWeatherAPI.js"></script>
+</body>
+</html>

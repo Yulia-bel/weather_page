@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+/* Main container - in the middle of the viewport, contects with display flex in column*/
+body{
+    background-repeat: no-repeat;
+    background-image: url("https://images.assetsdelivery.com/compings_v2/coffmancmu/coffmancmu1410/coffmancmu141000170.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 10vw;
+}
+
+.visible {
+    display: none;
+}
+.main__container {
+    position: fixed;
+    width: 30vw;
+    left: 34vw;
+    height: 70vh;
+    min-width: 300px;
+    top: 10vh;
+    border: none;
+    display: flex;
+    flex-flow: column;
+    font-family: 'Montserrat', sans-serif;
+    padding: 2vh 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px #444444;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Container for the search bar*/
+
+.search__bar {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    margin: 4vh auto;
+}
+
+#show__city {
+    padding: 0 1vw;
+    margin: 0 1vw;
+    background-color: rgb(56, 119, 98);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    width: 30%;
+    height: 100%;
+}
+
+/*Search input field sizing and styling*/
+
+#search {
+    width: 60%;
+    height: 3vh;
+    padding: 1vh 20px;
+    border-radius: 10px;
+    border: 0.5px solid grey;
+}
+
+/*Current City name and weekday*/
+
+#city__name{
+    text-align: center;
+    font-size: 5vh;
+}
+
+#weekday{
+    text-align: center;
+    font-size: 3vh;
+    padding: 1vh 20px;
+}
+
+/*Container for temperature in degrees and main weather icon*/
+
+.temperature__container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    /* padding: 3vh 2vw; */
+}
+.temperature__container>*{
+    margin: 3vh 5px;
+}
+
+/*Styles for elements inside temperature container - icon and degrees text*/
+
+#weather__icon {
+    width: 20%;
+    display: none;
+}
+
+#weather__degrees{
+    width: 30%;
+    font-size: 6vh;
+    text-align: center;
+
+}
+
+/*Sunset, sunrise and wind data*/
+
+.conditions__container{
+    display: flex;
+    /*flex-flow: row wrap;*/
+    padding: 1vh 20px;
+    margin: 3vh auto;
+    justify-content: space-between;
+    width: 85%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.icon{
+    height: 5vh;
+    width: 3vw;
+    padding: 0 20px 0 0;
+}
+
+
+.info {
+    padding: 0 20px 0 0;
+}
+
+#therm {
+    margin: 10px;
+    width: 20%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .temperature__container {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 250px;
+        /* padding: 3vh 2vw; */
+    }
+
+    .conditions__container {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 250px;
+        /* padding: 3vh 2vw; */
+    }
+    .main__container {
+        overflow-y: scroll;
+        width: 35vw;
+        left: 32vw;
+        min-width: 220px;
+        /* width: 30vw;
+        left: 34vw;
+        height: 70vh;
+        min-width: 300px; */
+    }
+}
+
+
+/* HERE WE GIVE FORMAT TO THE SCROLLBAR */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  /* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 4px grey;
+    border-radius: 4px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(187, 183, 183);
+    border-radius: 8px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+
+/* HERE WE MAKE THE DISPLAY RESPONSIVE DEPENDING ON THE VIEWPORT WIDTH SIZE*/
+
+@media only screen and (max-width: 380px) {
+    .temperature__container {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 250px;
+        /* padding: 3vh 2vw; */
+    }
+
+    .conditions__container {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 250px;
+        /* padding: 3vh 2vw; */
+    }
+    .main__container {
+        overflow-y: scroll;
+        width: 70vw;
+        left: 14vw;
+        min-width: 200px;
+        /* width: 30vw;
+        left: 34vw;
+        height: 70vh;
+        min-width: 300px; */
+    }
+}
+
+
