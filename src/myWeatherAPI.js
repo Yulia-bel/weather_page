@@ -1,5 +1,5 @@
 var APIkey = "a7338f44f1fa98796fcd7fe219c82404";
-var endPoint = "http://api.openweathermap.org/data/2.5/weather";
+var endPoint = "https://api.openweathermap.org/data/2.5/weather";
 //request through a city name
 //Use "weather" keyword and not "find"
 /**
